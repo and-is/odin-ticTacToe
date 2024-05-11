@@ -16,7 +16,7 @@
   display: grid;
   grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .box {
@@ -52,7 +52,8 @@
 .winnerDisp {
   margin: 100px auto;
 }
-.declaration {
+.declaration,
+.status {
   font-size: 30px;
   font-weight: bold;
   font-family: sans-serif;
@@ -60,4 +61,30 @@
   color: white;
   padding: 30px;
   text-align: center;
+}
+.no {
+  margin: 10px 30% 10px 30%;
+  box-shadow: 0px 10px 12px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 10px 12px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 12px -7px rgba(0, 0, 0, 0.75);
+}
+.reset {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+}
+.reset:hover {
+  background-color: rgb(29, 27, 27);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 10px 12px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 10px 12px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 12px -7px rgba(0, 0, 0, 0.75);
 }

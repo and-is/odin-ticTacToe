@@ -9,8 +9,8 @@ function Player(name, icon) {
 
 const gameBoard = () => {
   let board = {};
-  const player1 = new Player("Ram", "X");
-  const player2 = new Player("Shyam", "O");
+  const player1 = new Player("p1", "X");
+  const player2 = new Player("p2", "O");
   let a = false;
   player2.toggleTurn();
   for (let i = 1; i < 10; i++) {
@@ -24,15 +24,22 @@ const gameBoard = () => {
             board[i] = player1.icon;
             console.log(board);
             a = checkWin(board, player1, player2);
+            const bhaado3 = document.querySelector(".status");
+            bhaado3.textContent = "p2's turn";
           } else if (player2.turn) {
             bhaado.innerText = player2.icon;
             board[i] = player2.icon;
             console.log(board);
             a = checkWin(board, player1, player2);
+            const bhaado3 = document.querySelector(".status");
+            bhaado3.textContent = "p1's turn";
           }
           player2.toggleTurn();
           player1.toggleTurn();
         }
+      } else {
+        const bhaado3 = document.querySelector(".status");
+        bhaado3.textContent = "Game Over";
       }
     });
   }
@@ -106,4 +113,8 @@ const checkWin = (gameBoardState, player1, player2) => {
   }
 };
 
+const butt = document.querySelector(".reset");
+butt.addEventListener("click", () => {
+  location.reload();
+});
 gameBoard();
