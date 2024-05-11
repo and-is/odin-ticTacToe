@@ -48,3 +48,16 @@
 #a8 {
   border-right: 2px solid black;
 }
+
+.winnerDisp {
+  margin: 100px auto;
+}
+.declaration {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
